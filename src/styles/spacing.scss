@@ -1,0 +1,85 @@
+:root {
+  --spacing-base: 0.5rem;
+  @for $i from 0 through 8 {
+      --spacing-#{$i}: calc(#{$i} * var(--spacing-base));
+  }
+  
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.mt-auto {
+    margin-top: auto !important;
+}
+
+.mb-auto {
+    margin-bottom: auto !important;
+}
+
+.my-auto {
+    @extend .mb-auto, .mt-auto;
+}
+.mx-auto {
+    @extend .ml-auto, .mr-auto;
+}
+
+.ma-auto {
+    @extend .mx-auto, .my-auto
+}
+
+@for $i from 0 through 8 {
+  .mt-#{$i},
+  .my-#{$i},
+  .ma-#{$i} {
+    margin-top: var(--spacing-#{$i}) !important;
+  }
+  .mb-#{$i},
+  .my-#{$i},
+  .ma-#{$i} {
+    margin-bottom: var(--spacing-#{$i}) !important; 
+  }
+
+  .ml-#{$i},
+  .mx-#{$i},
+  .ma-#{$i} {
+    margin-left: var(--spacing-#{$i}) !important;
+  }
+  .mr-#{$i},
+  .mx-#{$i},
+  .ma-#{$i} {
+    margin-right: var(--spacing-#{$i}) !important;
+  }
+}
+
+@for $i from 0 through 8 {
+  .pt-#{$i},
+  .py-#{$i},
+  .pa-#{$i} {
+    padding-top: var(--spacing-#{$i}) !important;
+  }
+  .pb-#{$i},
+  .py-#{$i},
+  .pa-#{$i} {
+    padding-bottom: var(--spacing-#{$i}) !important; 
+  }
+
+  .pl-#{$i},
+  .px-#{$i},
+  .pa-#{$i} {
+    padding-left: var(--spacing-#{$i}) !important;
+  }
+  .pr-#{$i},
+  .px-#{$i},
+  .pa-#{$i} {
+    padding-right: var(--spacing-#{$i}) !important;
+  }
+}
+
+
+

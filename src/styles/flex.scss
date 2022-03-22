@@ -1,0 +1,28 @@
+$alignments : center, flex-start, flex-end, stretch;
+
+
+@each $align in $alignments {
+    .align-#{$align} {
+        align-items: $align;
+    }
+    
+}
+
+@each $justify in $alignments {
+    .justify-#{$justify} {
+        justify-content: $justify;
+    }
+    
+}
+
+.flex-center {
+    @extend .d-flex, .align-center, .justify-center;
+}
+
+.flex-fill {
+    flex: 1
+}
+
+.flex-auto {
+    flex:  0 auto;
+}
