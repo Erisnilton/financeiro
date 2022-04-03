@@ -41,8 +41,8 @@ async function save() {
     {{ store.divida }}
 </pre> -->
   <!-- <hr class="mb-8" /> -->
-  <form @submit.prevent="save">
-    <FDialog style="width: 100%; max-width: 480px">
+  <form @submit.prevent="save" style="width: 100vw; max-width: 480px">
+    <FDialog class="fill-w">
       <template #header>
         <h3>Nova Dívida</h3>
       </template>

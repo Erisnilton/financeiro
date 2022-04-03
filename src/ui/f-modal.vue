@@ -22,10 +22,10 @@ function changeVisiblity(visibility: boolean) {
     <transition name="fade">
       <div
         v-if="visible"
-        class="f-modal flex-center"
+        class="f-modal flex-center pa-4"
         @click="changeVisiblity(false)"
       >
-        <div @click.stop class="f-modal__content d-contents">
+        <div @click.stop class="f-modal__contents ma-auto">
           <slot></slot>
         </div>
       </div>
@@ -40,6 +40,7 @@ function changeVisiblity(visibility: boolean) {
   left: 0;
   bottom: 0;
   right: 0;
+  overflow: auto;
 
   background-color: #000a;
   backdrop-filter: blur(5px);

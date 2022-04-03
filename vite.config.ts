@@ -9,8 +9,6 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 export default defineConfig({
   plugins: [vue(), vueJsx(), pages({ dirs: "./src/pages" })],
   build: { outDir: "docs" },
-  base: "/financeiro/",
-
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
